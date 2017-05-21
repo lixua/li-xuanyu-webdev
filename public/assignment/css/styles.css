@@ -1,4 +1,3 @@
-
 /*
 .wd-scrollable-left-split {
     position: absolute;
@@ -50,8 +49,6 @@ body {
     padding-bottom: 30px;
 }
 
-
-
 @media (min-width: 768px) {
     .col-sm-8 {
         margin-left: 33%;
@@ -74,46 +71,50 @@ body {
     opacity: 0.8;
 }
 
-.white{
+.white {
     color: #ffffff;
 }
-.navbar-default{
+
+.navbar-default {
     background-color: #337ab7;
 }
+
 .video-container {
-    position:relative;
-    padding-bottom:56.25%;
-    padding-top:30px;
-    height:0;
-    overflow:hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
 .video-container iframe, .video-container object, .video-container embed {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-/*body {*/
-    /*padding-top: 50px;*/
-/*}*/
-
 .overflow {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     margin-top: 0;
-    color:#ccc;
+    color: #ccc;
 }
+
 .table th, .table td {
     border-top: none !important;
 }
 
-.overflow a {line-height:50px;padding:0 10px;margin:0;display:inline;}
+.overflow a {
+    line-height: 50px;
+    padding: 0 10px;
+    margin: 0;
+    display: inline;
+}

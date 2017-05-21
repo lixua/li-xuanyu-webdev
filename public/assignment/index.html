@@ -2,13 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+
 
     <title>Home</title>
 
@@ -22,17 +20,46 @@
 </head>
 
 <body>
-<li class="active"><a href="#">Home</a></li>
-<li><a href="user/login.html">Login</a></li>
-<li><a href="user/register.html">Register</a></li>
-<li><a href="user/profile.html">Profile</a></li>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
+<h1 class="navbar navbar-header">Home Page</h1>
+<div class="container-fluid">
+    <h3>User</h3>
+    <span>
+        <a href="user/login.html" class="btn btn-primary">Login</a>
+        <a href="user/register.html"class="btn btn-primary">Register</a>
+        <a href="user/profile.html"class="btn btn-primary">Profile</a>
+    </span>
+
+    <h3>Website</h3>
+    <span>
+        <a href="website/website-list.html" class="btn btn-success">Website List</a>
+        <a href="website/website-new.html"class="btn btn-success">New Website</a>
+        <a href="website/website-edit.html"class="btn btn-success">Edit Website</a>
+    </span>
+
+    <h3>Page</h3>
+    <span>
+        <a href="page/page-list.html" class="btn btn-default">Page List</a>
+        <a href="page/page-new.html"class="btn btn-default">New Page</a>
+        <a href="page/page-new.html"class="btn btn-default">Edit Page</a>
+    </span>
+
+    <h3>Widget</h3>
+    <span>
+        <a href="widget/widget-list.html" class="btn btn-danger">Widget List</a>
+        <a href="widget/widget-choose.html"class="btn btn-danger">Choose Widget</a>
+        <a href="widget/widget-heading.html"class="btn btn-danger">Edit Heading Widget</a>
+        <a href="widget/widget-image.html"class="btn btn-danger">Edit Image Widget</a>
+        <a href="widget/widget-youtube.html"class="btn btn-danger">Edit Youtube Widget</a>
+    </span>
+
+
+</div>
+
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-<!--<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>-->
-<!--<script src="../../assets/js/docs.min.js"></script>-->
+
 </body>
 </html>

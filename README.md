@@ -10,7 +10,7 @@
 a. My name is Xuanyu Li. I am an undergraduate student at College of Computer and Information Science in northeastern
 university. I have little knowledge about the websites, e.g HTML, JS, and CSS.
 
-b. This is the assignments 1 for web-development cousrse(cs4550). Setting up the evironment for webdev.
+b. This is the assignments 2 for web-development cousrse(cs4550). Learning the user interface on CSS and HTML
 
 c. i. Heroku: https://li-xuanyu-webdev.herokuapp.com/
 

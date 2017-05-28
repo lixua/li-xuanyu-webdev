@@ -1,0 +1,47 @@
+
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-header">
+            <a class="navbar-brand" href="#">
+                Profile
+            </a>
+            <div class="navbar-brand pull-right">
+                <a ng-click="model.updateUser(model.user.username,
+                model.user.password,model.user.password2,model.user.firstName,model.user.lastName,model.user.email)"
+                      class="glyphicon glyphicon-ok"> </a>
+            </div>
+
+</nav>
+<div class="container-fluid">
+    <div ng-show="model.error" class="alert alert-danger">
+        {{model.error}}
+    </div>
+    <label for="username">Username</label>
+    <input ng-model="model.user.username" id="username" class="form-control" placeholder="Username" type="text"/>
+
+    <label>Password</label>
+    <input ng-model="model.user.password" type="password" class="form-control" placeholder="Password" type="password"/>
+
+    <label>Verify Password</label>
+    <input ng-model="model.user.password2" type="password" class="form-control" placeholder="Verify Password" type="password"/>
+
+    <label>First Name</label>
+    <input ng-model="model.user.firstName" class="form-control" placeholder="First Name" type="text"/>
+
+    <label>Last Name</label>
+    <input ng-model="model.user.lastName" class="form-control" placeholder="Last Name" type="text"/>
+
+    <label>Email</label>
+    <input ng-model="model.user.email" type="email" class="form-control" placeholder="Email"/>
+
+    <a href="#!/user/{{model.userId}}/website" class="btn btn-block btn-primary">Websites</a>
+    <a href="#!/login" class="btn btn-block btn-danger">Logout</a>
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+    </div>
+</nav>
+

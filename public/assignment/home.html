@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="WedAppMaker">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <title>Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/bootstrap/theme.css" rel="stylesheet">
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/angular/angular-route.min.js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+</head>
+
+<body>
+
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-header">
+        <h1>Home Page</h1>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+    <h3>User</h3>
+    <span>
+        <a href="#/login" class="btn btn-primary">Login</a>
+        <a href="#/register" class="btn btn-primary">Register</a>
+        <a href="#/user/:uid" class="btn btn-primary">Profile</a>
+    </span>
+
+    <h3>Website</h3>
+    <span>
+        <a href="#/user/:uid/website" class="btn btn-success">Website List</a>
+        <a href="#/user/:uid/website/new" class="btn btn-success">New Website</a>
+        <a href="#/user/:uid/website/:wid" class="btn btn-success">Edit Website</a>
+    </span>
+
+    <h3>Page</h3>
+    <span>
+        <a href="#/user/:uid/website/:wid/page" class="btn btn-default">Page List</a>
+        <a href="#/user/:uid/website/:wid/page/new" class="btn btn-default">New Page</a>
+        <a href="#/user/:uid/website/:wid/page/:pid" class="btn btn-default">Edit Page</a>
+    </span>
+
+    <h3>Widget</h3>
+    <span>
+        <a href="#/user/:uid/website/:wid/page/:pid/widget" class="btn btn-danger">Widget List</a>
+        <a href="#/user/:uid/website/:wid/page/:pid/widget/new" class="btn btn-danger">Choose Widget</a>
+        <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgit/heading" class="btn btn-danger">Edit Heading Widget</a>
+        <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgit/image" class="btn btn-danger">Edit Image Widget</a>
+        <a href="#/user/:uid/website/:wid/page/:pid/widget/:wgit/youtube" class="btn btn-danger">Edit Youtube Widget</a>
+    </span>
+
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+</body>
+</html>

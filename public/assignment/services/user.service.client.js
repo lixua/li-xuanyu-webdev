@@ -20,7 +20,7 @@
                     if(response){
                         return response.data;
                     } else {
-                        return null;
+                        return "Error";
                     }
                 });
         }
@@ -32,7 +32,7 @@
                     if(response){
                         return response.data;
                     } else {
-                        return null;
+                        return "Error";
                     }
                 });
         }
@@ -44,7 +44,7 @@
                     if(response){
                         return response.data;
                     } else {
-                        return null;
+                        return "Error";
                     }
                 });
         }
@@ -56,7 +56,7 @@
                     if(response){
                         return response.data;
                     } else {
-                        return null;
+                        return "Error";
                     }
                 });
         }
@@ -68,7 +68,7 @@
                     if(response){
                         return response.data;
                     } else {
-                        return null;
+                        return "Error";
                     }
                 });
         }
@@ -80,7 +80,7 @@
                     if(response){
                         return response.data;
                     } else {
-                        return null;
+                        return "Error";
                     }
                 });
         }

@@ -7,21 +7,23 @@
         .controller('websiteListController', websiteListController);
 
     function websiteListController($routeParams,
-                                   websiteService,$location) {
-        var model = this;
+                                   websiteService) {
 
+        var model = this;
         model.userId = $routeParams['uid'];
 
         function init() {
+
             model.websites = websiteService
-                    .findWebsitesByUser(model.userId)
+                .findWebsitesByUser(model.userId)
                 .then(renderWebsites);
-            function renderWebsites(found){
+            function renderWebsites(found) {
                 model.websites = found;
             }
 
 
         }
+
         init();
 
     }

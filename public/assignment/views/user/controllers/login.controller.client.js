@@ -10,14 +10,12 @@
     function loginController($location, userService) {
 
         var model = this;
-
-        model.login = function (username, password){
+        model.login = function (username, password) {
             userService
-                .findUserByCredentials(username,password)
+                .findUserByCredentials(username, password)
                 .then(login);
             function login(found) {
-                console.log(found)
-                if(found !== null) {
+                if (found) {
                     $location.url('/user/' + found._id);
                 } else {
                     model.message = "sorry, please check username and password. please try again!";

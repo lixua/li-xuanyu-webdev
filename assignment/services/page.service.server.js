@@ -3,11 +3,11 @@
  */
 var app = require('../../express');
 
-app.post  ('/api/assignment/website/:websiteId/page', createPage);
-app.get   ('/assignment/api/assignment/website/:websiteId/page', findPageByWebsiteId);
-app.get   ('/assignment/api/assignment/page/:pageId', findPageById);
-app.put   ('/assignment/api/assignment/page/:pageId', updatePage);
-app.delete('/api/assignment/page/:pageId', deletePage);
+app.post    ('/api/assignment/website/:websiteId/page', createPage);
+app.get     ('/assignment/api/assignment/website/:websiteId/page', findPageByWebsiteId);
+app.get     ('/assignment/api/assignment/page/:pageId', findPageById);
+app.put     ('/assignment/api/assignment/page/:pageId', updatePage);
+app.delete  ('/api/assignment/page/:pageId', deletePage);
 
 var pages = [
     {"_id": "321", "name": "Post 1", "websiteId": "456", "description": "Lorem"},
@@ -22,10 +22,11 @@ function createPage(req, res) {
     pages.push(page);
     res.send(page);
 }
+
 function findPageByWebsiteId(req, res) {
     var resultSet = [];
-    for(var p in pages) {
-        if(pages[p].websiteId === req.params.websiteId) {
+    for (var p in pages) {
+        if (pages[p].websiteId === req.params.websiteId) {
             resultSet.push(pages[p]);
         }
     }
@@ -42,9 +43,9 @@ function findPageById(req, res) {
 
 function updatePage(req, res) {
     var page = req.body;
-    var pageId = req. params.pageId;
-    for(var p in pages) {
-        if(pageId === pages[p]._id) {
+    var pageId = req.params.pageId;
+    for (var p in pages) {
+        if (pageId === pages[p]._id) {
             pages[u] = page;
             res.sendStatus(200);
             return;

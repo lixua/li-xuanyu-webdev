@@ -7,29 +7,31 @@
         .controller('widgetListController', widgetListController);
 
     function widgetListController($routeParams,
-                                widgetService,$sce) {
+                                  widgetService, $sce) {
+
         var model = this;
 
-        model.userId=$routeParams['uid'];
+        model.userId = $routeParams['uid'];
         model.websiteId = $routeParams['wid'];
         model.pageId = $routeParams['pid'];
         model.trustThisContent = trustThisContent;
         model.getYouTubeEmbedUrl = getYouTubeEmbedUrl;
         model.getWidgetUrlForType = getWidgetUrlForType;
-
         function init() {
+
             model.widgets = widgetService
                 .findWidgetsByPageId(model.pageId)
                 .then(renderWidgets);
-            function renderWidgets(found){
+            function renderWidgets(found) {
                 model.widgets = found;
             }
         }
+
         init();
 
 
         function getWidgetUrlForType(type) {
-            return 'views/widget/templates/widget-'+type.toLowerCase()+'.view.client.html';
+            return 'views/widget/templates/widget-' + type.toLowerCase() + '.view.client.html';
         }
 
         function getYouTubeEmbedUrl(youTubeLink) {
@@ -39,11 +41,9 @@
             embedUrl += id;
             return $sce.trustAsResourceUrl(embedUrl);
 
-            //https://www.youtube.com/embed/AM2Ivdi9c4E
         }
 
         function trustThisContent(html) {
-            // diligence to scrub any unsafe content
             return $sce.trustAsHtml(html);
         }
     }

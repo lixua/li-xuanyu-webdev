@@ -9,37 +9,37 @@
     function websiteNewController($routeParams,
                                   $location,
                                   websiteService) {
+
         var model = this;
 
         model.userId = $routeParams['uid'];
         model.createWebsite = createWebsite;
-
         function init() {
             model.websites = websiteService
                 .findWebsitesByUser(model.userId)
                 .then(renderWebsites);
-            function renderWebsites(found){
+            function renderWebsites(found) {
                 model.websites = found;
             }
         }
+
         init();
 
-        function createWebsite(websiteName,websiteDescription) {
-            if(websiteName === null || websiteName === '' || typeof websiteName === 'undefined') {
+        function createWebsite(websiteName, websiteDescription) {
+            if (websiteName === null || websiteName === '' || typeof websiteName === 'undefined') {
                 model.error = 'Name is required';
                 return;
             } else {
-                if (typeof websiteDescription === 'undefined'){
+                if (typeof websiteDescription === 'undefined') {
                     websiteDescription = '';
                 }
                 var website = {}
                 website.name = websiteName;
                 website.description = websiteDescription;
                 website.developerId = model.userId;
-                websiteService.createWebsite(model.userId,website);
+                websiteService.createWebsite(model.userId, website);
                 $location.url('/user/' + model.userId + '/website');
             }
-
 
 
         }

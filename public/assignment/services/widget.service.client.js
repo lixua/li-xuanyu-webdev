@@ -19,7 +19,6 @@
         return api;
         function sortWidget(pageId, initial, final){
             var url = "/page/"+ pageId + "/widget?initial="+initial + "&final=" + final;
-            console.log(url)
             return $http.put(url)
         }
         function createWidget(pageId, widget) {

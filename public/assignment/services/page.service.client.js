@@ -13,15 +13,15 @@
             findPageById: findPageById,
             updatePage: updatePage,
             deletePage: deletePage
-        }
+        };
         return api;
 
 
         function createPage(websiteId, page) {
             var url = "/api/assignment/website/" + websiteId + "/page";
             return $http.post(url, page)
-                .then(function (response){
-                    if(response){
+                .then(function (response) {
+                    if (response) {
                         return response.data;
                     } else {
                         return null;
@@ -30,10 +30,10 @@
         }
 
         function findPageByWebsiteId(websiteId) {
-            var url = "api/assignment/website/"+websiteId+"/page";
+            var url = "api/assignment/website/" + websiteId + "/page";
             return $http.get(url)
                 .then(function (response) {
-                    if(response){
+                    if (response) {
                         return response.data;
                     } else {
                         return null;
@@ -45,7 +45,7 @@
             var url = "api/assignment/page/" + pageId;
             return $http.get(url)
                 .then(function (response) {
-                    if(response){
+                    if (response) {
                         return response.data;
                     } else {
                         return null;
@@ -59,7 +59,7 @@
             page._id = pageId;
             return $http.put(url, page)
                 .then(function (response) {
-                    if(response){
+                    if (response) {
                         return response.data;
                     } else {
                         return null;
@@ -68,10 +68,10 @@
         }
 
         function deletePage(pageId) {
-            var url = "/api/assignment/page/"+pageId;
+            var url = "/api/assignment/page/" + pageId;
             return $http.delete(url)
                 .then(function (response) {
-                    if(response){
+                    if (response) {
                         return response.data;
                     } else {
                         return null;

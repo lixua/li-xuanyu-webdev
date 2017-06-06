@@ -6,22 +6,23 @@
         .module('WebAppMaker')
         .controller('pageListController', pageListController);
     function pageListController($routeParams,
-                                   pageService,$location) {
+                                pageService) {
+
         var model = this;
 
         model.userId = $routeParams['uid'];
         model.websiteId = $routeParams['wid'];
-
-
         function init() {
+
             model.pages = pageService
                 .findPageByWebsiteId(model.websiteId)
                 .then(renderPages);
-            function renderPages(found){
+            function renderPages(found) {
                 model.pages = found;
             }
 
         }
+
         init();
 
     }

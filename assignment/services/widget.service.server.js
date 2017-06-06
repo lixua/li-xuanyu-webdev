@@ -56,6 +56,7 @@ function createWidget(req, res) {
         widget._id = (new Date()).getTime() + "";
     }
     widgets.push(widget);
+    console.log(widgets);
     res.send(widget);
 }
 
@@ -119,6 +120,7 @@ function uploadImage(req, res) {
     var destination = myFile.destination;  // folder where file is saved to
     var size = myFile.size;
     var mimetype = myFile.mimetype;
+    var exist = false;
 
     var widget = {
         "_id": widgetId, "widgetType": "IMAGE", "pageId": pageId, "width": width,
@@ -130,6 +132,10 @@ function uploadImage(req, res) {
             widgets[w] = widget;
             exist = true;
         }
+    }
+
+    if(!exist){
+        widgets.push(widget);
     }
 
 

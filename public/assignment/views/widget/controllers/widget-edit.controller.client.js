@@ -38,6 +38,7 @@
         }
 
         function updateWidget(awidget) {
+
             widgetService.updateWidget(model.widgetId, awidget);
             $location.url('/user/' + model.userId + '/website/' + model.websiteId + '/page/' + model.pageId + '/widget');
 

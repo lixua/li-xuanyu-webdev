@@ -13,9 +13,13 @@
         model.websiteId = $routeParams['wid'];
         model.pageId = $routeParams['pid'];
         model.selectPhoto = selectPhoto;
+        model.widgetId = $routeParams['wgid'];
         function init() {
 
             model.searchPhotos = function (searchTerm) {
+                if(typeof model.widgetId === 'undefiend'){
+                    model.widgetId = widget._id = (new Date()).getTime() + "";
+                }
 
                 FlickrService
                     .searchPhotos(searchTerm)
@@ -38,7 +42,7 @@
                 "widgetType": "IMAGE", "pageId": model.pageId, "width": "100%",
                 "url": url
             };
-            widget._id = (new Date()).getTime() + "";
+            widget._id = model.widgetId;
             widgetService
                 .createWidget(model.pageId, widget)
                 .then(

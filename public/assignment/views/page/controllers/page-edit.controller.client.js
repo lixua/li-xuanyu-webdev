@@ -15,9 +15,24 @@
         model.websiteId = $routeParams['wid'];
         model.pageId = $routeParams['pid'];
         model.updatePage = updatePage;
+        model.deletePage = deletePage;
+        model.page = pageService.findPageById(model.pageId)
+            .then(renderPage);
+        function renderPage(found){
+            model.page = found;
+        }
+        function deletePage(){
 
+            pageService.deletePage(model.pageId);
+            $location.url('/user/' + model.userId + '/website/' + model.websiteId +'/page');
+        }
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.websiteId);
+            model.pages = pageService
+                .findPageByWebsiteId(model.websiteId)
+                .then(renderPages);
+                function renderPages(found){
+                    model.pages = found;
+                }
         }
         init();
 

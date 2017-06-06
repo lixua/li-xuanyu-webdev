@@ -16,7 +16,12 @@
         model.createPage = createPage;
 
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.websiteId);
+            model.pages = pageService
+                .findPageByWebsiteId(model.websiteId)
+                .then(renderPages);
+            function renderPages(found){
+                model.pages = found;
+            }
         }
         init();
 
@@ -32,7 +37,7 @@
                 page.name = pageName;
                 page.websiteId = model.websiteId;
                 page.description = pageDescription
-                pageService.createPage(page);
+                pageService.createPage(model.websiteId,page);
                 $location.url('/user/' + model.userId + '/website/' + model.websiteId + '/page');
             }
 

@@ -6,69 +6,83 @@
         .module('WebAppMaker')
         .factory('widgetService', widgetService);
 
-    function widgetService() {
+    function widgetService($http) {
 
-        var widgets =
-            [
-                { "_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},
-                { "_id": "234", "widgetType": "HEADING", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
-                { "_id": "345", "widgetType": "IMAGE", "pageId": "321", "width": "100%",
-                    "url": "http://lorempixel.com/400/200/"},
-                { "_id": "456", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"},
-                { "_id": "567", "widgetType": "HEADING", "pageId": "321", "size": 4, "text": "Lorem ipsum"},
-                { "_id": "678", "widgetType": "YOUTUBE", "pageId": "321", "width": "100%",
-                    "url": "https://youtu.be/AM2Ivdi9c4E" },
-                { "_id": "789", "widgetType": "HTML", "pageId": "321", "text": "<p>Lorem ipsum</p>"}
-            ];
-
-
-        return {
+        var api = {
             createWidget: createWidget,
             findWidgetsByPageId: findWidgetsByPageId,
             findWidgetById: findWidgetById,
             updateWidget: updateWidget,
             deleteWidget: deleteWidget,
+            sortWidget: sortWidget
         };
-
-
-        function createWidget(pageId, widget) {
-            widget._id = widgets[widgets.length-1]._id+1+"";
-            widget.pageId = pageId
-            widgets.push(widget);
+        return api;
+        function sortWidget(pageId, initial, final){
+            var url = "/page/"+ pageId + "/widget?initial="+initial + "&final=" + final;
+            console.log(url)
+            return $http.put(url)
         }
-
+        function createWidget(pageId, widget) {
+            var url = "/api/assignment/page/" + pageId + "/widget";
+            return $http.post(url, widget)
+                .then(function (response){
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
+        }
 
         function findWidgetsByPageId(pageId) {
-            var resultSet = [];
-            for(var w in widgets) {
-                if(widgets[w].pageId === pageId) {
-                    resultSet.push(widgets[w]);
-                }
-            }
-            return resultSet;
+            var url = "api/assignment/page/"+pageId+"/widget";
+            return $http.get(url)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
+
         function findWidgetById(widgetId) {
-            return widgets.find(function (widget) {
-                return widget._id === widgetId;
-            });
+            var url = "api/assignment/widget/" + widgetId;
+            return $http.get(url)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
 
 
         function updateWidget(widgetId, widget) {
-            var temp = findWidgetById(widgetId);
+            var url = "/api/assignment/widget/" + widgetId;
             widget._id = widgetId;
-            widgets[widgets.indexOf(temp)] = widget
+            return $http.put(url, widget)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
 
         function deleteWidget(widgetId) {
-            var widget = widgets.find(function (widget) {
-                return widget._id === widgetId;
-            });
-            var index = widgets.indexOf(widget);
-            widget.splice(index, 1);
+            var url = "/api/assignment/widget/"+widgetId;
+            return $http.delete(url)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
-
-
 
 
     }

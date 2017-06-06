@@ -14,9 +14,7 @@
         model.websiteId = $routeParams['wid'];
         model.pageId = $routeParams['pid'];
         model.widgetId = $routeParams['wgid'];
-        model.widget = widgetService.findWidgetById(model.widgetId);
-        model.createWidget = createWidget
-
+        model.createWidget = createWidget;
         function createWidget(awidget){
             awidget.pageId = model.pageId;
             widgetService.createWidget(model.pageId,awidget)

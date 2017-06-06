@@ -15,7 +15,12 @@
         model.createWebsite = createWebsite;
 
         function init() {
-            model.websites = websiteService.findWebsitesByUser(model.userId);
+            model.websites = websiteService
+                .findWebsitesByUser(model.userId)
+                .then(renderWebsites);
+            function renderWebsites(found){
+                model.websites = found;
+            }
         }
         init();
 
@@ -31,7 +36,7 @@
                 website.name = websiteName;
                 website.description = websiteDescription;
                 website.developerId = model.userId;
-                websiteService.updateWebsite(website);
+                websiteService.createWebsite(model.userId,website);
                 $location.url('/user/' + model.userId + '/website');
             }
 

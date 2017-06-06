@@ -11,15 +11,19 @@
 
         var model = this;
 
-        model.login = login;
-
-        function login(username, password) {
-            var found = userService.findUserByCredentials(username, password);
-            if(found !== null) {
-                $location.url('/user/' + found._id);
-            } else {
-                model.message = "sorry, please check username and password. please try again!";
+        model.login = function (username, password){
+            userService
+                .findUserByCredentials(username,password)
+                .then(login);
+            function login(found) {
+                console.log(found)
+                if(found !== null) {
+                    $location.url('/user/' + found._id);
+                } else {
+                    model.message = "sorry, please check username and password. please try again!";
+                }
             }
         }
+
     }
 })();

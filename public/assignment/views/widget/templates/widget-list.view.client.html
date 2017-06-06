@@ -16,8 +16,10 @@
 </nav>
 
 
-<div class="container-fluid">
+<div class="container-fluid" >
+    <div wbdv-sortable ng-model="model.widgets" >
     <div ng-repeat="widget in model.widgets">
+
         <div class="wd-widget">
             <div class="wd-toolbar">
             <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
@@ -25,6 +27,7 @@
             </a>
             <span class="glyphicon glyphicon-align-justify"></span>
             </div>
+
         <div ng-switch="widget.widgetType">
             <div ng-switch-when="HEADING">
                 <div ng-include src="'views/widget/templates/widget-heading.view.client.html'"></div>
@@ -40,10 +43,12 @@
                 <div ng-include src="'views/widget/templates/widget-youtube.view.client.html'"></div>
             </div>
         </div>
-    </div>
 
 
+
     </div>
+    </div>
+</div>
 </div>
 <br>
 <br>

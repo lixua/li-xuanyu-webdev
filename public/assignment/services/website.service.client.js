@@ -6,66 +6,84 @@
         .module('WebAppMaker')
         .factory('websiteService', websiteService);
 
-    function websiteService() {
-
-        var websites = [
-            { "_id": "123", "name": "Facebook",    "developerId": "456", "description": "Lorem" },
-            { "_id": "234", "name": "Tweeter",     "developerId": "456", "description": "Lorem" },
-            { "_id": "456", "name": "Gizmodo",     "developerId": "456", "description": "Lorem" },
-            { "_id": "890", "name": "Go",          "developerId": "123", "description": "Lorem" },
-            { "_id": "567", "name": "Tic Tac Toe", "developerId": "123", "description": "Lorem" },
-            { "_id": "678", "name": "Checkers",    "developerId": "123", "description": "Lorem" },
-            { "_id": "789", "name": "Chess",       "developerId": "234", "description": "Lorem" }
-        ];
-
-        return {
+    function websiteService($http) {
+        var api = {
             createWebsite: createWebsite,
             findWebsitesByUser: findWebsitesByUser,
             findWebsiteById: findWebsiteById,
             updateWebsite: updateWebsite,
             deleteWebsite: deleteWebsite
         };
+        return api;
 
-        function createWebsite(website) {
-            website._id = parseInt(websites[websites.length-1]._id)+1+"";
 
-            website.name = website.name;
-            websites.push(website);
+
+
+
+        function createWebsite(userId, website) {
+            var url = "/api/assignment/user/" + userId + "/website";
+            return $http.post(url, website)
+                .then(function (response){
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
+
         }
         function findWebsitesByUser(userId) {
-            var resultSet = [];
-            for(var w in websites) {
-                if(websites[w].developerId === userId) {
-                    resultSet.push(websites[w]);
-                }
-            }
-            return resultSet;
+            var url = "/api/assignment/user/"+userId+"/website";
+            return $http.get(url)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
+
+
+
         function findWebsiteById(websiteId) {
-            return websites.find(function (website) {
-                return website._id === websiteId;
-            });
+            var url = "api/assignment/website/" + websiteId;
+            return $http.get(url)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
+
 
         function updateWebsite(websiteId, website) {
-
-            var temp = findWebsiteById(websiteId);
+            var url = "/api/assignment/website/"+websiteId;
             website._id = websiteId;
-            websites[websites.indexOf(temp)] = website
+            return $http.put(url, website)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
+
         }
 
         function deleteWebsite(websiteId) {
-            var website = websites.find(function (website) {
-                return website._id === websiteId;
-            });
-            var index = websites.indexOf(website);
-            websites.splice(index, 1);
+            var url = "/api/assignment/website/"+websiteId;
+            return $http.delete(url)
+                .then(function (response) {
+                    if(response){
+                        return response.data;
+                    } else {
+                        return null;
+                    }
+                });
         }
-
-
-
-
-
 
     }
 })();

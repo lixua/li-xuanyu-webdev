@@ -51,7 +51,9 @@
             <label for="description">Description</label>
             <textarea ng-model="model.website.description" type="text" id="description" rows="5" class="form-control"
                       placeholder="Description For Website"></textarea>
-            <a href="#!/user/{{model.userId}}/website" class="btn btn-block btn-danger">Delete</a>
+            <a ng-click="model.deleteWebsite()"
+               class="btn btn-block btn-danger">Delete</a>
+
         </div>
     </div>
 </div>

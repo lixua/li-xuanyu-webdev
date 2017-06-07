@@ -56,7 +56,6 @@ function createWidget(req, res) {
         widget._id = (new Date()).getTime() + "";
     }
     widgets.push(widget);
-    console.log(widgets);
     res.send(widget);
 }
 

@@ -92,6 +92,8 @@
                 controllerAs: "model"
             })
 
+
+
     }
 
 })();

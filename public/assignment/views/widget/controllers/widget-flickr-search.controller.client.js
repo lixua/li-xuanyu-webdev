@@ -17,8 +17,8 @@
         function init() {
 
             model.searchPhotos = function (searchTerm) {
-                if(typeof model.widgetId === 'undefiend'){
-                    model.widgetId = widget._id = (new Date()).getTime() + "";
+                if(typeof model.widgetId === 'undefined'){
+                    model.widgetId = (new Date()).getTime() + "";
                 }
 
                 FlickrService

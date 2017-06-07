@@ -7,12 +7,14 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.15",
-    "multer": "^1.3.0"
+    "multer": "^1.3.0",
+    "nodemon": "^1.11.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "startn": "nodemon server.js"
   },
   "author": "Jose G. Annunziato",
   "license": "ISC"

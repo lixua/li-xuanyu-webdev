@@ -10,6 +10,7 @@
         var model = this;
         model.userId = $routeParams['uid'];
         model.updateUser = updateUser;
+        model.deleteUser = deleteUser;
         function init() {
             model.user = userService
                 .findUserById(model.userId)
@@ -46,6 +47,16 @@
             } else {
                 model.error = "sorry, that username is taken";
 
+            }
+
+        }
+        function deleteUser(password1, password2){
+            if (password1 !== password2){
+                model.error = "passwords must be verified to delete account";
+                return;
+            } else {
+                userService.deleteUser(model.userId);
+                $location.url('/login');
             }
 
         }

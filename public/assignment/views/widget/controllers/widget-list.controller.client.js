@@ -23,8 +23,15 @@
                 .findWidgetsByPageId(model.pageId)
                 .then(renderWidgets);
             function renderWidgets(found) {
+                found.sort(function(a,b){
+                    var A = a.position;
+                    var B = b.position;
+                    if(A < B) return -1;
+                    if(A > B) return 1;
+                })
                 model.widgets = found;
             }
+
         }
 
         init();

@@ -21,11 +21,7 @@
             var url = "/api/assignment/website/" + websiteId + "/page";
             return $http.post(url, page)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 
@@ -33,11 +29,7 @@
             var url = "api/assignment/website/" + websiteId + "/page";
             return $http.get(url)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 
@@ -45,11 +37,7 @@
             var url = "api/assignment/page/" + pageId;
             return $http.get(url)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 
@@ -59,11 +47,7 @@
             page._id = pageId;
             return $http.put(url, page)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 
@@ -71,11 +55,7 @@
             var url = "/api/assignment/page/" + pageId;
             return $http.delete(url)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 

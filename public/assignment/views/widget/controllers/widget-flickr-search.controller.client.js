@@ -2,6 +2,7 @@
  * Created by xuanyuli on 6/5/17.
  */
 (function () {
+
     angular
         .module('WebAppMaker')
         .controller('FlickrImageSearchController', FlickrImageSearchController);
@@ -14,12 +15,10 @@
         model.pageId = $routeParams['pid'];
         model.selectPhoto = selectPhoto;
         model.widgetId = $routeParams['wgid'];
+        console.log($routeParams['wgid']);
         function init() {
 
             model.searchPhotos = function (searchTerm) {
-                if(typeof model.widgetId === 'undefined'){
-                    model.widgetId = (new Date()).getTime() + "";
-                }
 
                 FlickrService
                     .searchPhotos(searchTerm)
@@ -28,6 +27,7 @@
                         data = data.substring(0, data.length - 1);
                         data = JSON.parse(data);
                         model.photos = data.photos;
+
 
                     });
             };
@@ -39,14 +39,25 @@
             var url = "https://farm" + photo.farm + ".staticflickr.com/" + photo.server;
             url += "/" + photo.id + "_" + photo.secret + "_b.jpg";
             var widget = {
-                "widgetType": "IMAGE", "pageId": model.pageId, "width": "100%",
+                "widgetType": "IMAGE", "_page": model.pageId, "width": "100%",
                 "url": url
             };
-            widget._id = model.widgetId;
-            widgetService
-                .createWidget(model.pageId, widget)
-                .then(
-                    $location.url('/user/' + model.userId + "/website/" + model.websiteId + "/page/" + model.pageId + "/widget/" + widget._id));
+            if(typeof model.widgetId === 'undefined'){
+                widgetService.createWidget(model.pageId, widget)
+                    .then(function(widget){
+                        $location.url('/user/' + model.userId + "/website/" + model.websiteId + "/page/" + model.pageId + "/widget/" + widget._id);
+
+                    })
+
+            } else {
+                console.log(model.widgetId);
+                widgetService.updateWidget(model.widgetId,widget)
+                    .then(function(widget){
+                        console.log(widget);
+                        $location.url('/user/' + model.userId + "/website/" + model.websiteId + "/page/" + model.pageId + "/widget/" + model.widgetId);
+
+
+            })}
 
         }
 

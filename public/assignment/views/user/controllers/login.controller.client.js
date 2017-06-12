@@ -15,7 +15,7 @@
                 .findUserByCredentials(username, password)
                 .then(login);
             function login(found) {
-                if (found) {
+                if (found !== "Error:404") {
                     $location.url('/user/' + found._id);
                 } else {
                     model.message = "sorry, please check username and password. please try again!";

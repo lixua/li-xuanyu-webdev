@@ -21,11 +21,7 @@
             var url = "/api/assignment/user/" + userId + "/website";
             return $http.post(url, website)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
 
         }
@@ -34,11 +30,7 @@
             var url = "/api/assignment/user/" + userId + "/website";
             return $http.get(url)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 
@@ -47,11 +39,7 @@
             var url = "api/assignment/website/" + websiteId;
             return $http.get(url)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 
@@ -61,11 +49,7 @@
             website._id = websiteId;
             return $http.put(url, website)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
 
         }
@@ -74,11 +58,7 @@
             var url = "/api/assignment/website/" + websiteId;
             return $http.delete(url)
                 .then(function (response) {
-                    if (response) {
-                        return response.data;
-                    } else {
-                        return null;
-                    }
+                    return response.data;
                 });
         }
 

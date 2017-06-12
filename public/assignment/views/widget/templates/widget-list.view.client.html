@@ -36,11 +36,14 @@
                 <div ng-include src="'views/widget/templates/widget-image.view.client.html'"></div>
             </div>
             <div ng-switch-when="HTML">
-                <div ng-bind-html="model.trustThisContent(widget.text)"></div>
+                <div ng-include src="'views/widget/templates/widget-html.view.client.html'"></div>
             </div>
             <div ng-switch-when="YOUTUBE">
                 <br>
                 <div ng-include src="'views/widget/templates/widget-youtube.view.client.html'"></div>
+            </div>
+            <div ng-switch-when="INPUT">
+                <div ng-include src="'views/widget/templates/widget-input.view.client.html'"></div>
             </div>
         </div>
 

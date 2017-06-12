@@ -1,10 +1,13 @@
+console.log("WTF1")
 module.exports = function(app)
 {
+    console.log('WTF')
     app.get("/api/test", findAllMessages);
     app.post("/api/test", createMessage);
     app.delete("/api/test/:id", deleteMessage);
 
-    var connectionString = 'mongodb://127.0.0.1:27017/test';
+
+    var connectionString = 'mongodb://127.0.0.1:27017/webdev-lixuanyu';
     if(process.env.MLAB_USERNAME_WEBDEV) { // check if running remotely
         var username = process.env.MLAB_USERNAME_WEBDEV; // get from environment
         var password = process.env.MLAB_PASSWORD_WEBDEV;
@@ -21,6 +24,7 @@ module.exports = function(app)
     }
 
     var mongoose = require("mongoose");
+    console.log(connectionString)
     mongoose.connect(connectionString);
 
     var TestSchema = mongoose.Schema({

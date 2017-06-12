@@ -2,7 +2,7 @@
  * Created by xuanyuli on 6/5/17.
  */
 var app = require('../../express');
-
+var websiteModel = require('../model/website/website.model.server');
 app.get     ('/api/assignment/user/:userId/website', findWebsitesByUser);
 app.post    ('/api/assignment/user/:userId/website', createWebsite);
 app.get     ('/assignment/api/assignment/website/:websiteId', findWebsiteById);
@@ -21,51 +21,76 @@ var websites = [
 
 function createWebsite(req, res) {
     var website = req.body;
-    website.developerId = req.params['userId'];
-    website._id = (new Date()).getTime() + "";
-    websites.push(website);
-    res.send(website);
+    website._user = req.params['userId'];
+    websiteModel
+        .createWebsite(website)
+        .then(function(website){
+            res.json(website);
+        })
 }
 function findWebsitesByUser(req, res) {
-    var resultSet = [];
-    for (var w in websites) {
-        if (websites[w].developerId === req.params.userId) {
-            resultSet.push(websites[w]);
-        }
-    }
-    res.json(resultSet);
+    websiteModel
+        .findWebsitesByUser(req.params.userId)
+        .then(function (websites){
+            res.json(websites);
+        })
+    // var resultSet = [];
+    // for (var w in websites) {
+    //     if (websites[w].developerId === req.params.userId) {
+    //         resultSet.push(websites[w]);
+    //     }
+    // }
+    // res.json(resultSet);
 }
 
 function findWebsiteById(req, res) {
-
-    var websiteId = req.params['websiteId'];
-    var website = websites.find(function (website) {
-        return website._id === websiteId;
-    });
-    res.send(website);
+    var webiteId = req.params['websiteId'];
+    websiteModel
+        .findWebsiteById(webiteId)
+        .then(function(website){
+            res.json(website);
+        })
+    // var websiteId = req.params['websiteId'];
+    // var website = websites.find(function (website) {
+    //     return website._id === websiteId;
+    // });
+    // res.send(website);
 }
 
 function updateWebsite(req, res) {
     var website = req.body;
     var websiteId = req.params.websiteId;
-    for (var w in websites) {
-        if (websiteId === websites[w]._id) {
-            websites[w] = website;
+    websiteModel
+        .updateWebsite(websiteId, website)
+        .then(function(status){
             res.sendStatus(200);
-            return;
-        }
-    }
-    res.send(false);
+        })
+    // var website = req.body;
+    // var websiteId = req.params.websiteId;
+    // for (var w in websites) {
+    //     if (websiteId === websites[w]._id) {
+    //         websites[w] = website;
+    //         res.sendStatus(200);
+    //         return;
+    //     }
+    // }
+    // res.send(false);
 
 }
 
 
 function deleteWebsite(req, res) {
     var websiteId = req.params.websiteId;
-    var website = websites.find(function (website) {
-        return website._id === websiteId;
-    });
-    var index = websites.indexOf(website);
-    websites.splice(index, 1);
-    res.sendStatus(200);
+    websiteModel
+        .deleteWebsite(websiteId)
+        .then(function(status){
+            res.sendStatus(200);
+        });
+    // var websiteId = req.params.websiteId;
+    // var website = websites.find(function (website) {
+    //     return website._id === websiteId;
+    // });
+    // var index = websites.indexOf(website);
+    // websites.splice(index, 1);
+    // res.sendStatus(200);
 }

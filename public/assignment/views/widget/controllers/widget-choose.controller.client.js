@@ -41,7 +41,6 @@
                     awidget.size = '4';
                 }
             }
-            console.log(awidget);
             widgetService.createWidget(model.pageId, awidget);
             $location.url('/user/' + model.userId + '/website/' + model.websiteId + '/page/' + model.pageId + '/widget');
 

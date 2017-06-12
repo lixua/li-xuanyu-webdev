@@ -23,7 +23,6 @@ function createWebsite(website){
     return websiteModel.create(website);
 }
 function findWebsiteById(websiteId){
-    console.log(websiteId);
     return websiteModel.findById(websiteId);
 }
 

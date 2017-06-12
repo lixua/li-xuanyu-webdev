@@ -1,7 +1,5 @@
-console.log("WTF1")
 module.exports = function(app)
 {
-    console.log('WTF')
     app.get("/api/test", findAllMessages);
     app.post("/api/test", createMessage);
     app.delete("/api/test/:id", deleteMessage);
@@ -24,7 +22,6 @@ module.exports = function(app)
     }
 
     var mongoose = require("mongoose");
-    console.log(connectionString)
     mongoose.connect(connectionString);
 
     var TestSchema = mongoose.Schema({

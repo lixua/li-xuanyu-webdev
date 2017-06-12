@@ -84,7 +84,6 @@ function findUserByCredentials(req, res) {
     userModel
         .findUserByCredentials(username,password)
         .then(function(user){
-            console.log(user);
             if(user !== null){
                 res.json(user);
             } else {

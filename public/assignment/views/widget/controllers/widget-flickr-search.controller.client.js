@@ -15,7 +15,6 @@
         model.pageId = $routeParams['pid'];
         model.selectPhoto = selectPhoto;
         model.widgetId = $routeParams['wgid'];
-        console.log($routeParams['wgid']);
         function init() {
 
             model.searchPhotos = function (searchTerm) {
@@ -50,10 +49,8 @@
                     })
 
             } else {
-                console.log(model.widgetId);
                 widgetService.updateWidget(model.widgetId,widget)
                     .then(function(widget){
-                        console.log(widget);
                         $location.url('/user/' + model.userId + "/website/" + model.websiteId + "/page/" + model.pageId + "/widget/" + model.widgetId);
 
 

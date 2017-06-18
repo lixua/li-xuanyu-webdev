@@ -20,6 +20,11 @@ app.put     ('/api/assignment/user/:userId', updateUser);
 app.delete  ('/api/assignment/user/:userId', deleteUser);
 app.get('/api/assignment/loggedin', loggedin);
 app.post('/api/assignment/register', register);
+app.get('/auth/facebook/callback',
+    passport.authenticate('facebook', {
+        successRedirect: '/assignment/#!/profile',
+        failureRedirect: '/#!/login'
+    }));
 
 var facebookConfig= {
     clientID : process.env.MLAB_FACEBOOK_CLIENTID,

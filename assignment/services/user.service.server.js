@@ -21,12 +21,17 @@ app.delete  ('/api/assignment/user/:userId', deleteUser);
 app.get('/api/assignment/loggedin', loggedin);
 app.post('/api/assignment/register', register);
 app.get ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+app.get('/auth/facebook/callback',
+    passport.authenticate('facebook', {
+        successRedirect: '/#/user',
+        failureRedirect: '/#/login'
+    }));
 
 
 var facebookConfig= {
     clientID :'318814531895993',
     clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',
-    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook',
+    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback',
     profileFields: ['emails','id','name','displayName'],
     enableProof: true
 };

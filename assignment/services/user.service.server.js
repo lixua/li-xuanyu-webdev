@@ -20,20 +20,17 @@ app.put     ('/api/assignment/user/:userId', updateUser);
 app.delete  ('/api/assignment/user/:userId', deleteUser);
 app.get('/api/assignment/loggedin', loggedin);
 app.post('/api/assignment/register', register);
-app.get ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }))
 app.get('/auth/facebook/callback',
-    passport.authenticate('facebook', {
-        successRedirect: '/#/user',
-        failureRedirect: '/#/login'
-    }));
-
+        passport.authenticate('facebook', {
+           successRedirect: '/#!/proflie',
+    failureRedirect: '/#!/login'
+ }));
 
 var facebookConfig= {
-    clientID :'318814531895993',
-    clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',
-    callbackURL  : '/auth/facebook/callback',
-    profileFields: ['emails','id','name','displayName'],
-    enableProof: true
+    clientID :'326701864419877',
+    clientSecret : 'c7a7bfaec0607b9d5c2cb71a758bb200',
+    callbackURL  : 'https://chen-wenbin-webdev.herokuapp.com/auth/facebook/callback',
 };
 passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
 function facebookStrategy(token, refreshToken, profile, done) {

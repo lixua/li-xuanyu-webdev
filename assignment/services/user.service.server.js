@@ -22,14 +22,15 @@ app.get('/api/assignment/loggedin', loggedin);
 app.post('/api/assignment/register', register);
 app.get('/auth/facebook/callback',
     passport.authenticate('facebook', {
-        successRedirect: '/assignment/#!/profile',
-        failureRedirect: '/#!/login'
+        successRedirect: '/profile',
+        failureRedirect: '/login'
     }));
 
 var facebookConfig= {
-    clientID : process.env.MLAB_FACEBOOK_CLIENTID,
-    clientSecret : process.env.MLAB_FACEBOOK_CLIENTSECRET,
-    callbackURL  : process.env.MLAB_FACEBOOK_CALLBACK,
+    clientID :'318814531895993',// process.env.MLAB_FACEBOOK_CLIENTID,
+    clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',//process.env.MLAB_FACEBOOK_CLIENTSECRET,
+    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback'
+    ,//process.env.MLAB_FACEBOOK_CALLBACK,
     profileFields: ['emails','id','name','displayName'],
     enableProof: true
 };

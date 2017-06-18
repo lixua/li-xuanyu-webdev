@@ -31,7 +31,7 @@ app.get('/auth/facebook/callback',
 var facebookConfig= {
     clientID :'318814531895993',
     clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',
-    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback',
+    callbackURL  : '/auth/facebook/callback',
     profileFields: ['emails','id','name','displayName'],
     enableProof: true
 };

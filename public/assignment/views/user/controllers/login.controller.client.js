@@ -12,11 +12,11 @@
         var model = this;
         model.login = function (username, password) {
             userService
-                .findUserByCredentials(username, password)
+                .login(username, password)
                 .then(login);
             function login(found) {
                 if (found !== "Error:404") {
-                    $location.url('/user/' + found._id);
+                    $location.url('/profile');
                 } else {
                     model.message = "sorry, please check username and password. please try again!";
                 }

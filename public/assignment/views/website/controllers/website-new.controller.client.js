@@ -8,11 +8,11 @@
 
     function websiteNewController($routeParams,
                                   $location,
-                                  websiteService) {
+                                  websiteService,currentUser) {
 
         var model = this;
 
-        model.userId = $routeParams['uid'];
+        model.userId = currentUser._id;
         model.createWebsite = createWebsite;
         function init() {
             model.websites = websiteService
@@ -38,7 +38,7 @@
                 website.description = websiteDescription;
                 website.developerId = model.userId;
                 websiteService.createWebsite(model.userId, website);
-                $location.url('/user/' + model.userId + '/website');
+                $location.url('/website');
             }
 
 

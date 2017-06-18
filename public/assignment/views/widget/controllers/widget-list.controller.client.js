@@ -7,11 +7,11 @@
         .controller('widgetListController', widgetListController);
 
     function widgetListController($routeParams,
-                                  widgetService, $sce) {
+                                  widgetService, $sce,currentUser) {
 
         var model = this;
 
-        model.userId = $routeParams['uid'];
+        model.userId = currentUser._id;
         model.websiteId = $routeParams['wid'];
         model.pageId = $routeParams['pid'];
         model.trustThisContent = trustThisContent;

@@ -8,12 +8,12 @@
 
     function websiteEditController($routeParams,
                                    $location,
-                                   websiteService) {
+                                   websiteService,currentUser) {
 
 
         var model = this;
 
-        model.userId = $routeParams['uid'];
+        model.userId = currentUser._id;
         model.websiteId = $routeParams['wid'];
         model.updateWebsite = updateWebsite;
         model.deleteWebsite = deleteWebsite;
@@ -28,7 +28,6 @@
                 .findWebsiteById(model.websiteId)
                 .then(renderWebsite);
             function renderWebsite(found) {
-                console.log(found)
                 model.website = found;
             }
 
@@ -39,7 +38,7 @@
 
         function deleteWebsite() {
             websiteService.deleteWebsite(model.websiteId);
-            $location.url('/user/' + model.userId + '/website');
+            $location.url('/website');
         }
 
 
@@ -57,7 +56,7 @@
                 website.description = websiteDescription;
                 website.developerId = model.userId;
                 websiteService.updateWebsite(model.websiteId, website);
-                $location.url('/user/' + model.userId + '/website');
+                $location.url('/website');
             }
 
         }

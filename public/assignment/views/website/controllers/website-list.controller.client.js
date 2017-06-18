@@ -7,10 +7,10 @@
         .controller('websiteListController', websiteListController);
 
     function websiteListController($routeParams,
-                                   websiteService) {
+                                   websiteService,currentUser) {
 
         var model = this;
-        model.userId = $routeParams['uid'];
+        model.userId = currentUser._id;
 
         function init() {
 

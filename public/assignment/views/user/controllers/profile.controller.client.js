@@ -6,21 +6,22 @@
         .module('WebAppMaker')
         .controller('profileController', profileController);
 
-    function profileController($location, $routeParams, userService) {
+    function profileController($location, $routeParams,currentUser, userService) {
         var model = this;
-        model.userId = $routeParams['uid'];
+
+        model.userId = currentUser._id;
         model.updateUser = updateUser;
         model.deleteUser = deleteUser;
-        function init() {
-            model.user = userService
-                .findUserById(model.userId)
-                .then(renderUser);
-            function renderUser(found) {
-                model.user = found;
-            }
+        model.user = currentUser;
+        model.logout = logout;
+        model.user.password2 = model.user.password;
+        function logout(){
+            userService
+                .logout()
+                .then(function(){
+                    $location.url('/login')
+                })
         }
-
-        init();
 
         function updateUser(username, password, password2, firstName, lastName, email) {
             if (username === null || username === '' || typeof username === 'undefined') {
@@ -28,8 +29,8 @@
                 return;
             }
 
-            if (password !== password2 || password === null || typeof password === 'undefined') {
-                model.error = "passwords must match";
+            if (password !== password2|| password === null || typeof password === 'undefined') {
+                model.error = "must have passwords";
                 return;
             }
 
@@ -42,7 +43,7 @@
                     lastName: lastName
                 };
                 userService.updateUser(model.userId, newUser);
-                $location.url('/user/' + model.userId);
+                $location.url('/profile');
 
             } else {
                 model.error = "sorry, that username is taken";

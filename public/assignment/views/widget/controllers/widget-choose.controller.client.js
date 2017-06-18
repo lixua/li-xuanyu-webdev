@@ -8,11 +8,11 @@
 
     function widgetChooseController($routeParams,
                                     $location,
-                                    widgetService) {
+                                    widgetService,currentUser) {
 
         var model = this;
         model.position = [];
-        model.userId = $routeParams['uid'];
+        model.userId = currentUser._id;
         model.websiteId = $routeParams['wid'];
         model.pageId = $routeParams['pid'];
         model.createWidget = createWidget;
@@ -42,7 +42,7 @@
                 }
             }
             widgetService.createWidget(model.pageId, awidget);
-            $location.url('/user/' + model.userId + '/website/' + model.websiteId + '/page/' + model.pageId + '/widget');
+            $location.url('/website/' + model.websiteId + '/page/' + model.pageId + '/widget');
 
         }
     }

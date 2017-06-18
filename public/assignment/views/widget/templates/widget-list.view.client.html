@@ -1,15 +1,15 @@
 
 <nav class="navbar navbar-default navbar-fixed-top navbar-header">
     <div class="navbar-brand pull-left">
-        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
+        <a href="#!/website/{{model.websiteId}}/page"
            class="glyphicon glyphicon-menu-left"> </a>
     </div>
 
-    <a class="navbar-brand" href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget">
+    <a class="navbar-brand" href="#!/website/{{model.websiteId}}/page/{{model.pageId}}/widget">
         Widget List
     </a>
     <div class="navbar-brand pull-right">
-        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new"
+        <a href="#!/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new"
            class="glyphicon glyphicon-plus"> </a>
     </div>
 
@@ -22,7 +22,7 @@
 
         <div class="wd-widget">
             <div class="wd-toolbar">
-            <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
+            <a href="#!/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}">
                 <span class="glyphicon glyphicon-cog"></span>
             </a>
             <span class="glyphicon glyphicon-align-justify"></span>
@@ -57,7 +57,7 @@
 <br>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="pull-right navbar-brand">
-        <a href="#!/user/{{model.userId}}">
+        <a href="#!/profile">
             <span class="glyphicon glyphicon-user pull-right"></span>
         </a></div>
 </nav>

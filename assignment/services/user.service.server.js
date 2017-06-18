@@ -22,9 +22,9 @@ app.get('/api/assignment/loggedin', loggedin);
 app.post('/api/assignment/register', register);
 
 var facebookConfig= {
-    clientID : "318814531895993",
-    clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',
-    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback',
+    clientID : process.env.MLAB_FACEBOOK_CLIENTID,
+    clientSecret : process.env.MLAB_FACEBOOK_CLIENTSECRET,
+    callbackURL  : process.env.MLAB_FACEBOOK_CALLBACK,
     profileFields: ['emails','id','name','displayName'],
     enableProof: true
 };

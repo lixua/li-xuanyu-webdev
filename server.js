@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-w
 
 
 app.use(session({
-    secret: "demonbill",
+    secret: process.env.MLAB_SECRET,
     resave: true,
     saveUninitialized: true}));
 app.use(cookieParser());

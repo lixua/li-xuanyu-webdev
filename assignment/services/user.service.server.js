@@ -9,7 +9,7 @@ passport.serializeUser(serializeUser);
 passport.deserializeUser(deserializeUser);
 
 
-app.get ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
 app.post  ('/api/assignment/logout', logout);
 app.post  ('/api/assignment/login', passport.authenticate('local'), login);
 app.get     ('/api/assignment/user', findUserByCredentials);
@@ -20,17 +20,13 @@ app.put     ('/api/assignment/user/:userId', updateUser);
 app.delete  ('/api/assignment/user/:userId', deleteUser);
 app.get('/api/assignment/loggedin', loggedin);
 app.post('/api/assignment/register', register);
-app.get('/auth/facebook/callback',
-    passport.authenticate('facebook', {
-        successRedirect: '/profile',
-        failureRedirect: '/login'
-    }));
+app.get ('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+
 
 var facebookConfig= {
-    clientID :'318814531895993',// process.env.MLAB_FACEBOOK_CLIENTID,
-    clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',//process.env.MLAB_FACEBOOK_CLIENTSECRET,
-    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback'
-    ,//process.env.MLAB_FACEBOOK_CALLBACK,
+    clientID :'318814531895993',
+    clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',
+    callbackURL  : 'http://li-xuanyu-webdev.herokuapp.com/auth/facebook',
     profileFields: ['emails','id','name','displayName'],
     enableProof: true
 };

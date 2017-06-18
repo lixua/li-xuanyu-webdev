@@ -28,8 +28,8 @@ app.get('/auth/facebook/callback',
  }));
 
 var facebookConfig= {
-    clientID :'318814531895993',
-    clientSecret : '7400a70796ac28a1ec9b50d26e4a120d',
+    clientID :'756500394522431',
+    clientSecret : 'f10475d151b7caef5fcf1156a27c6614',
     callbackURL  : 'https://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback',
 };
 passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));

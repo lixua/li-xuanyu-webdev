@@ -46,7 +46,6 @@ function facebookStrategy(token, refreshToken, profile, done) {
                         username: names[1] + names[0],
                         lastName:  names[1],
                         firstName: names[0],
-                        email: profile.emails[0].value,
                         facebook: {
                             id: profile.id,
                             token: token

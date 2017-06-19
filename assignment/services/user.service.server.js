@@ -28,9 +28,9 @@ app.get('/auth/facebook/callback',
  }));
 
 var facebookConfig= {
-    clientID :'756500394522431',
-    clientSecret : 'f10475d151b7caef5fcf1156a27c6614',
-    callbackURL  : 'https://li-xuanyu-webdev.herokuapp.com/auth/facebook/callback',
+    clientID :process.env.MLAB_FACEBOOK_CLIENTID,
+    clientSecret : process.env.MLAB_FACEBOOK_CLIENTSECRET,
+    callbackURL  : process.env.MLAB_FACEBOOK_CALLBACK,
 };
 passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
 function facebookStrategy(token, refreshToken, profile, done) {

@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8357632-bc33-4abb-8152-681112fdce14" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/License.txt" afterPath="$PROJECT_DIR$/public/personal/License.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/Personal.psd" afterPath="$PROJECT_DIR$/public/personal/Personal.psd" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_body-element.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_body-element.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_fonts.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_fonts.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_globals.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_globals.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_normalize.scss" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_normalize.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_selection-colors.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_selection-colors.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_typography.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_typography.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_vars.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_vars.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/2-layout/_grid.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/2-layout/_grid.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_animations.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_animations.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_blurb.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_blurb.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_buttons.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_buttons.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_links.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_links.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_logo.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_logo.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_navigation.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_navigation.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_splashscreen.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_splashscreen.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_title.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_title.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/4-pages/_home.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/4-pages/_home.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/main.css" afterPath="$PROJECT_DIR$/public/personal/assets/css/main.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/main.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/main.sass" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/proj1.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/proj1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/proj2.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/proj2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/proj3.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/proj3.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/self.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/self.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/functions-min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/functions-min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/functions.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/functions.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/CSSPlugin.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/CSSPlugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/CSSRulePlugin.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/CSSRulePlugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/ScrollMagic.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/ScrollMagic.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/ScrollToPlugin.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/ScrollToPlugin.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/TimelineLite.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/TimelineLite.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/TweenLite.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/TweenLite.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/animation.gsap.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/animation.gsap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/jquery-2.2.4.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/jquery-2.2.4.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/jquery.ScrollMagic.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/jquery.ScrollMagic.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/jquery.gsap.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/jquery.gsap.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/index.html" afterPath="$PROJECT_DIR$/public/personal/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/personal/index.html" afterPath="$PROJECT_DIR$/public/personal/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -55,17 +17,17 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/personal/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="143" column="39" lean-forward="false" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
+            <state relative-caret-position="161">
+              <caret line="92" column="96" lean-forward="false" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -133,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/project/model/user/admin/admin.schema.server.js" />
         <option value="$PROJECT_DIR$/public/project/model/user/visitor/visitor.schema.server.js" />
         <option value="$PROJECT_DIR$/public/project/model/user/admin/admin.model.server.js" />
         <option value="$PROJECT_DIR$/public/project/model/user/seller/seller.schema.server.js" />
@@ -184,6 +145,7 @@
         <option value="$PROJECT_DIR$/assignment/services/user.service.server.js" />
         <option value="$PROJECT_DIR$/Personal page/index.html" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/personal/index.html" />
       </list>
     </option>
   </component>
@@ -271,6 +233,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="li-xuanyu-webdev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="li-xuanyu-webdev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,12 +485,12 @@
       <workItem from="1498076377859" duration="60000" />
       <workItem from="1498184713714" duration="857000" />
       <workItem from="1498192771858" duration="1202000" />
-      <workItem from="1498537773648" duration="2935000" />
+      <workItem from="1498537773648" duration="3090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234873000" />
+    <option name="totallyTimeSpent" value="235028000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="27" width="1280" height="713" extended-state="0" />
@@ -890,18 +870,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/personal/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="143" column="39" lean-forward="false" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/personal/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="92" column="96" lean-forward="false" selection-start-line="92" selection-start-column="96" selection-end-line="92" selection-end-column="96" />
           <folding />
         </state>
       </provider>

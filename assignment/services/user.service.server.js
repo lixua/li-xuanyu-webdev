@@ -30,7 +30,7 @@ app.get('/auth/facebook/callback',
 var facebookConfig= {
     clientID :process.env.MLAB_FACEBOOK_CLIENTID,
     clientSecret : process.env.MLAB_FACEBOOK_CLIENTSECRET,
-    callbackURL  : process.env.MLAB_FACEBOOK_CALLBACK,
+    callbackURL  : process.env.MLAB_FACEBOOK_CALLBACK
 };
 passport.use(new FacebookStrategy(facebookConfig, facebookStrategy));
 function facebookStrategy(token, refreshToken, profile, done) {

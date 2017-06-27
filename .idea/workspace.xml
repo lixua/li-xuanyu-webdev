@@ -2,46 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8357632-bc33-4abb-8152-681112fdce14" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/Personal.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/img/proj1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/img/proj2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/img/proj3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/img/self.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/License.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_body-element.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_fonts.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_globals.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_normalize.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_selection-colors.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_typography.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/1-base/_vars.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/2-layout/_grid.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_animations.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_blurb.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_buttons.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_links.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_logo.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_navigation.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_splashscreen.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/3-modules/_title.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/4-pages/_home.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/css/main.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/functions-min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/functions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/CSSPlugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/CSSRulePlugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/ScrollMagic.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/ScrollToPlugin.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/TimelineLite.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/TweenLite.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/animation.gsap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/jquery-2.2.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/jquery.ScrollMagic.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/assets/js/vendor/jquery.gsap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/personal/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assignment/services/user.service.server.js" afterPath="$PROJECT_DIR$/assignment/services/user.service.server.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/License.txt" afterPath="$PROJECT_DIR$/public/personal/License.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/Personal.psd" afterPath="$PROJECT_DIR$/public/personal/Personal.psd" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_body-element.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_body-element.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_fonts.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_fonts.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_globals.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_globals.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_normalize.scss" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_normalize.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_selection-colors.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_selection-colors.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_typography.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_typography.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/1-base/_vars.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/1-base/_vars.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/2-layout/_grid.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/2-layout/_grid.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_animations.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_animations.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_blurb.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_blurb.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_buttons.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_buttons.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_links.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_links.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_logo.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_logo.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_navigation.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_navigation.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_splashscreen.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_splashscreen.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/3-modules/_title.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/3-modules/_title.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/4-pages/_home.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/4-pages/_home.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/main.css" afterPath="$PROJECT_DIR$/public/personal/assets/css/main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/css/main.sass" afterPath="$PROJECT_DIR$/public/personal/assets/css/main.sass" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/proj1.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/proj1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/proj2.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/proj2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/proj3.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/proj3.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/img/self.png" afterPath="$PROJECT_DIR$/public/personal/assets/img/self.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/functions-min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/functions-min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/functions.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/functions.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/CSSPlugin.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/CSSPlugin.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/CSSRulePlugin.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/CSSRulePlugin.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/ScrollMagic.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/ScrollMagic.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/ScrollToPlugin.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/ScrollToPlugin.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/TimelineLite.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/TimelineLite.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/TweenLite.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/TweenLite.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/animation.gsap.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/animation.gsap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/jquery-2.2.4.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/jquery-2.2.4.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/jquery.ScrollMagic.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/jquery.ScrollMagic.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/assets/js/vendor/jquery.gsap.min.js" afterPath="$PROJECT_DIR$/public/personal/assets/js/vendor/jquery.gsap.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/personal/index.html" afterPath="$PROJECT_DIR$/public/personal/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -58,7 +56,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personal/index.html">
+        <entry file="file://$PROJECT_DIR$/public/personal/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="227">
               <caret line="143" column="39" lean-forward="false" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
@@ -70,15 +68,15 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            <state relative-caret-position="100">
+              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="self.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/personal/assets/img/self.png">
+        <entry file="file://$PROJECT_DIR$/public/personal/assets/img/self.png">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -293,11 +291,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/Personal page/assets/img" />
       <recent name="$PROJECT_DIR$/public/assignment/css" />
       <recent name="$PROJECT_DIR$/public/assignment/vendor/textAngular" />
       <recent name="$PROJECT_DIR$/public/assignment" />
-      <recent name="$PROJECT_DIR$/public/assignment/vendor/jquery" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Personal page" />
@@ -507,12 +505,12 @@
       <workItem from="1498076377859" duration="60000" />
       <workItem from="1498184713714" duration="857000" />
       <workItem from="1498192771858" duration="1202000" />
-      <workItem from="1498537773648" duration="2779000" />
+      <workItem from="1498537773648" duration="2935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234717000" />
+    <option name="totallyTimeSpent" value="234873000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="27" width="1280" height="713" extended-state="0" />
@@ -814,7 +812,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/assets/js/vendor/CSSPlugin.min.js">
+    <entry file="file://$PROJECT_DIR$/public/personal/assets/js/vendor/CSSPlugin.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -852,22 +850,22 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/assets/img/proj1.png">
+    <entry file="file://$PROJECT_DIR$/public/personal/assets/img/proj1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/assets/img/proj2.png">
+    <entry file="file://$PROJECT_DIR$/public/personal/assets/img/proj2.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/assets/img/proj3.png">
+    <entry file="file://$PROJECT_DIR$/public/personal/assets/img/proj3.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/assets/img/self.png">
+    <entry file="file://$PROJECT_DIR$/public/personal/assets/img/self.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -892,7 +890,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/personal/index.html">
+    <entry file="file://$PROJECT_DIR$/public/personal/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
           <caret line="143" column="39" lean-forward="false" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
@@ -902,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="100">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
